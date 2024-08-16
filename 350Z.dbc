@@ -1,0 +1,102 @@
+VERSION ""
+
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_: 
+BU_: BCM Key_status IPDM RPMS Speed Temp AC Acc_Pedal Break_Pedal ABS 
+BO_ 1549 BCM_Output: 8 BCM
+   SG_ Blinker_Left : 14|1@0+ (1,0) [0|1] "" BCM
+   SG_ Blinker_Right : 13|1@0+ (1,0) [0|1] "" BCM
+   SG_ Key_turned_acc : 9|1@0+ (1,0) [0|1] "" BCM
+   SG_ Key_turned_on : 10|1@0+ (1,0) [0|1] "" BCM
+   SG_ Headlights_P : 2|1@0+ (1,0) [0|1] "" BCM
+   SG_ Headlights_L : 1|1@0+ (1,0) [0|1] "" BCM
+   SG_ Headlights_H : 11|1@0+ (1,0) [0|1] "" BCM
+   SG_ Door_Passenger : 4|1@0+ (1,0) [0|1] "" BCM
+   SG_ Door_Pilot : 3|1@0+ (1,0) [0|1] "" BCM
+   SG_ Trunk : 7|1@0+ (1,0) [0|1] "" BCM
+
+BO_ 856 Key_status_1: 8 Key_status
+   SG_ Key_inserted : 0|1@0+ (1,0) [0|1] "" Key_status
+
+BO_ 1573 Headlights_feedback: 8 IPDM
+   SG_ Headlights_P : 14|1@0+ (1,0) [0|1] "" IPDM
+   SG_ Headlights_L : 13|1@0+ (1,0) [0|1] "" IPDM
+   SG_ Headlights_H : 12|1@0+ (1,0) [0|1] "" IPDM
+
+BO_ 505 RPMS_Output: 8 RPMS
+   SG_ RPMS : 23|16@0+ (0.1,0) [0|65535] "rpm" RPMS
+
+BO_ 852 Speed_Output: 8 Speed
+   SG_ Speed : 7|16@0+ (0.01,0) [0|65535] "kph" Speed
+
+BO_ 1361 Temp: 8 Temp
+   SG_ EngineTemp : 7|8@0+ (1,0) [0|1] "ºF" Temp
+
+BO_ 861 AC: 8 AC
+   SG_ AC_On : 0|1@0+ (1,0) [0|1] "" AC
+
+BO_ 573 Acc_Pedal: 8 Acc_Pedal
+   SG_ AccPedal : 15|8@0+ (0.392158,0) [0|100] "%" Acc_Pedal
+
+BO_ 670 Break_Pedal: 8 Break_Pedal
+   SG_ BreakPedal : 30|1@0+ (1,0) [0|1] "" Break_Pedal
+
+BO_ 1477 ABS_Module: 0 ABS
+   SG_ Seatbelt_Light : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BA_DEF_ BO_ "GenMsgBackgroundColor" STRING ;
+BA_DEF_ BO_ "GenMsgForegroundColor" STRING ;
+BA_DEF_ BO_ "matchingcriteria" INT 0 0;
+BA_DEF_ BO_ "filterlabeling" INT 0 0;
+BA_DEF_ BO_ "matchingcriteria" INT 0 0;
+BA_DEF_ BO_ "filterlabeling" INT 0 0;
+BA_ "GenMsgBackgroundColor" BO_ 1549 "#58b360";
+BA_ "GenMsgForegroundColor" BO_ 1549 "#000000";
+BA_ "GenMsgBackgroundColor" BO_ 856 "#58b360";
+BA_ "GenMsgBackgroundColor" BO_ 1573 "#c2ffb9";
+BA_ "GenMsgBackgroundColor" BO_ 505 "#ff6f6f";
+BA_ "GenMsgForegroundColor" BO_ 505 "#000000";
+BA_ "GenMsgBackgroundColor" BO_ 852 "#7bff7f";
+BA_ "GenMsgBackgroundColor" BO_ 1361 "#ff85ef";
+BA_ "GenMsgBackgroundColor" BO_ 861 "#4a62ff";
+BA_ "GenMsgForegroundColor" BO_ 573 "#000000";
+BA_ "GenMsgBackgroundColor" BO_ 573 "#40fcff";
+BA_ "GenMsgBackgroundColor" BO_ 670 "#ff2e31";
+BA_ "GenMsgForegroundColor" BO_ 670 "#000000";
+BA_ "GenMsgBackgroundColor" BO_ 1477 "#fbff00";
+BA_DEF_DEF_ "GenMsgBackgroundColor" "#ffffff";
+BA_DEF_DEF_ "GenMsgForegroundColor" "#000000";
+BA_DEF_DEF_ "matchingcriteria" 0;
+BA_DEF_DEF_ "filterlabeling" 1;
+BA_DEF_DEF_ "matchingcriteria" 0;
+BA_DEF_DEF_ "filterlabeling" true;
